@@ -46,9 +46,21 @@ public:
 
         Node *temp = top; // create temporary pointer
         top = top->next; // update the top pointer to the next node
-        cout << "Popped value: " << top->data << endl;
+        cout << "Popped value: " << temp->data << endl;
         delete temp;
     }
-}
+
+void peek()
+{
+    if (top == NULL)
+    {
+        cout << "List is empty." << endl;
+    }
+    
+
+
+
+
+
 
 
