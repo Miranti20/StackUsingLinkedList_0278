@@ -64,7 +64,15 @@ void peek()
             cout << current->data << " " << endl;
             current = current->next;
         }
-    }
+        cout << endl;
+    } // retrunt the value of the top node
+}
+// is empty operation, check is the stack empty
+bool isEmpty()
+{
+    return top == NULL; // return the if too pointer us null.indicate an empty stack
+}
+};
 
 
 
