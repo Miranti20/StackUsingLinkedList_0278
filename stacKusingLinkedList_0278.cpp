@@ -29,10 +29,10 @@ public:
     // Push operation Insert an element onto the top of the stack
     int push(int value) // operasi push
     {
-        Node *newNode = new Node();
-        newNode->data = value;
-        newNode->next = top;
-        top = newNode;
+        Node *newNode = new Node(); //1. Allocate memory for the new node
+        newNode->data = value; //2. assign value 
+        newNode->next = top; // 3. set the next pointer of the new node 
+        top = newNode; // 4. update the top pointer into the new node
         cout << "Push value: " << value << endl;
         return value;
     }
@@ -47,6 +47,8 @@ public:
         Node *temp = top; // create temporary pointer
         top = top->next; // update the top pointer to the next node
         cout << "Popped value: " << top->data << endl;
+        delete temp;
     }
 }
+
 
